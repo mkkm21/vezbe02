@@ -7,9 +7,10 @@
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET GLOBAL sql_mode = '';
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -35,7 +36,7 @@ CREATE TABLE `prijave` (
   `predmet` varchar(255) NOT NULL,
   `katedra` varchar(255) NOT NULL,
   `sala` varchar(255) NOT NULL,
-  `datum` date NOT NULL DEFAULT current_timestamp()
+  `datum` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
